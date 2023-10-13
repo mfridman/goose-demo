@@ -25,7 +25,7 @@ func main() {
 	if err := goose.Up(db, "."); err != nil {
 		panic(err)
 	}
-	if err := goose.Version(db, "migrations"); err != nil {
+	if err := goose.Version(db, "."); err != nil {
 		log.Fatal(err)
 	}
 }
