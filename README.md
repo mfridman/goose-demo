@@ -6,20 +6,21 @@ Post can be found here:
 
 https://pressly.github.io/goose/blog/2021/embed-sql-migrations/
 
+## Example
+
 To run the example, clone this repository and run:
 
 ```
 $ go run ./cmd/custom-goose
 ```
 
+For demonstration purposes we're using a sqlite3 database, but goose supports many other databases.
+
+1. Migration 1 (sql) creates a users table Migration
+2. Migration 2 (go) inserts 10 users into the users table
+3. Migration 3 (go) counts the number of users and prints them out to the console
+
 The output should be:
-
-Note, for demonstration purposes we're using a sqlite3 database, but goose supports many other
-databases.
-
-Migration 1 - creates a users table
-Migration 2 - inserts 10 users into the users table
-Migration 3 - counts the number of users in the users table and prints them out to the console
 
 ```
 OK   00001_users_table.sql (670.88µs)
