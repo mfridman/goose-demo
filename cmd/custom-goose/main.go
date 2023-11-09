@@ -49,13 +49,13 @@ func main() {
 		fmt.Printf("%-3s %-2v %v\n", s.Source.Type, s.Source.Version, s.State)
 	}
 
-	fmt.Println("\n=== run migrations  ===")
+	fmt.Println("\n=== log migration output  ===")
 	results, err := provider.Up(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println("\n=== migration results  ===")
 	for _, r := range results {
-		fmt.Printf("%-3s %-2v %v\n", r.Source.Type, r.Source.Version, r.Duration)
+		fmt.Printf("%-3s %-2v done: %v\n", r.Source.Type, r.Source.Version, r.Duration)
 	}
 }
