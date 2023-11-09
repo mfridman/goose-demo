@@ -23,19 +23,30 @@ For demonstration purposes we're using a sqlite3 database, but goose supports ma
 The output should be:
 
 ```
-OK   00001_users_table.sql (670.88µs)
-OK   00002_add_users.go (404.92µs)
-User: 1, intelligent_dubinsky2
-User: 2, busy_galileo7
-User: 3, confident_feistel1
-User: 4, keen_maxwell3
-User: 5, objective_burnell6
-User: 6, sleepy_jennings2
-User: 7, dazzling_dijkstra2
-User: 8, naughty_roentgen8
-User: 9, clever_wilbur9
-User: 10, pedantic_satoshi2
-OK   00003_count_users.go (365.21µs)
-goose: successfully migrated database to version: 3
-goose: version 3
+=== migration list ===
+sql 1  00001_users_table.sql
+go  2  00002_add_users.go
+go  3  00003_count_users.go
+
+=== migration status ===
+sql 1  pending
+go  2  pending
+go  3  pending
+
+=== log migration output  ===
+User: 7, affectionate_buck4
+User: 5, angry_mclaren3
+User: 8, friendly_thompson6
+User: 10, funny_babbage8
+User: 2, funny_gagarin9
+User: 4, infallible_pare9
+User: 3, priceless_margulis7
+User: 6, silly_lovelace0
+User: 1, sleepy_easley0
+User: 9, tender_mcclintock0
+
+=== migration results  ===
+sql 1  completed in: 763µs
+go  2  completed in: 612.417µs
+go  3  completed in: 489.042µs
 ```
