@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mfridman/goose-demo/migrations"
+	"github.com/mfridman/goose-demo/data/sql/migrations"
 	"github.com/pressly/goose/v3"
 	"github.com/pressly/goose/v3/database"
 	_ "modernc.org/sqlite"
